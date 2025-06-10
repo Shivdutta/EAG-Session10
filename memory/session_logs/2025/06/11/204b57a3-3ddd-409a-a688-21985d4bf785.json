@@ -1,0 +1,120 @@
+{
+  "session_id": "204b57a3-3ddd-409a-a688-21985d4bf785",
+  "original_query": "\"Calculate cos(30) + sin(90) - tan(45)\"",
+  "perception": {
+    "entities": [
+      "cos(30)",
+      "sin(90)",
+      "tan(45)"
+    ],
+    "result_requirement": "The result of the calculation cos(30) + sin(90) - tan(45)",
+    "original_goal_achieved": false,
+    "reasoning": "The user is asking for a numerical calculation. This can be directly achieved using a calculator tool.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The entities are successfully extracted and the type of calculation needed is identified.",
+    "last_tooluse_summary": "Not ready yet",
+    "solution_summary": "Not ready yet",
+    "confidence": "1.0",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Calculate cos(30), sin(90), and tan(45) using available math functions.",
+        "Step 1: Substitute the values obtained in the previous step into the expression cos(30) + sin(90) - tan(45) and calculate the final result using the run_python_sandbox tool to do the calculation.",
+        "Step 2: Return the final result."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Calculate cos(30), sin(90), and tan(45) using available math functions.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "cos_30 = cos(30)\nsin_90 = sin(90)\ntan_45 = tan(45)\nreturn cos_30, sin_90, tan_45"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "(0.15425144988758405, 0.8939966636005579, 1.6197751905438615)",
+            "execution_time": "2025-06-11 00:51:40",
+            "total_time": "2.348"
+          },
+          "error": null,
+          "perception": {
+            "entities": [],
+            "result_requirement": "The final numerical answer to cos(30) + sin(90) - tan(45)",
+            "original_goal_achieved": false,
+            "reasoning": "This result appears to be intermediate numerical output, not the final answer. It is unclear what these numbers represent in the context of the plan. It needs to be further evaluated within the plan.",
+            "local_goal_achieved": false,
+            "local_reasoning": "The raw input is just a set of numbers, its unclear from what tool it comes from or what step. We need more information to assess if the local goal was achieved.",
+            "last_tooluse_summary": "Unknown tool - Needs more context to determine success or failure.",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.1",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "204b57a3-3ddd-409a-a688-21985d4bf785",
+    "query": "\"Calculate cos(30) + sin(90) - tan(45)\"",
+    "final_plan": [
+      "Step 0: Calculate cos(30), sin(90), and tan(45) using available math functions.",
+      "Step 1: Substitute the values obtained in the previous step into the expression cos(30) + sin(90) - tan(45) and calculate the final result using the run_python_sandbox tool to do the calculation.",
+      "Step 2: Return the final result."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Calculate cos(30), sin(90), and tan(45) using available math functions.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "cos_30 = cos(30)\nsin_90 = sin(90)\ntan_45 = tan(45)\nreturn cos_30, sin_90, tan_45"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "(0.15425144988758405, 0.8939966636005579, 1.6197751905438615)",
+          "execution_time": "2025-06-11 00:51:40",
+          "total_time": "2.348"
+        },
+        "error": null,
+        "perception": {
+          "entities": [],
+          "result_requirement": "The final numerical answer to cos(30) + sin(90) - tan(45)",
+          "original_goal_achieved": false,
+          "reasoning": "This result appears to be intermediate numerical output, not the final answer. It is unclear what these numbers represent in the context of the plan. It needs to be further evaluated within the plan.",
+          "local_goal_achieved": false,
+          "local_reasoning": "The raw input is just a set of numbers, its unclear from what tool it comes from or what step. We need more information to assess if the local goal was achieved.",
+          "last_tooluse_summary": "Unknown tool - Needs more context to determine success or failure.",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.1",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": null,
+    "confidence": 0.0,
+    "reasoning_note": ""
+  },
+  "_session_id_short": "204b57a3"
+}

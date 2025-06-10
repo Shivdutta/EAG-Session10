@@ -1,0 +1,36 @@
+{
+  "session_id": "e6b6db56-7ad6-4574-bc43-6c19fae0fe93",
+  "original_query": "\"Divide 144 by 12 then subtract 4 and then multiply that answer by 2\"",
+  "perception": {
+    "entities": [
+      "144",
+      "12",
+      "4",
+      "2"
+    ],
+    "result_requirement": "The result of the calculation: (144/12 - 4) * 2",
+    "original_goal_achieved": true,
+    "reasoning": "The query is a straightforward arithmetic calculation that can be performed directly. No external tools or information are needed.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The query was parsed and understood completely, and the required calculation is clear.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "The answer is 16.",
+    "confidence": "1.0",
+    "human_input": null
+  },
+  "plan_versions": [],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "e6b6db56-7ad6-4574-bc43-6c19fae0fe93",
+    "query": "\"Divide 144 by 12 then subtract 4 and then multiply that answer by 2\"",
+    "final_plan": [],
+    "final_steps": [],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The answer is 16.",
+    "confidence": "1.0",
+    "reasoning_note": "The query is a straightforward arithmetic calculation that can be performed directly. No external tools or information are needed."
+  },
+  "_session_id_short": "e6b6db56"
+}

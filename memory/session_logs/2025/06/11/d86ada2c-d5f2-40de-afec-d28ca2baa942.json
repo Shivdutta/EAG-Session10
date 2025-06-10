@@ -1,0 +1,217 @@
+{
+  "session_id": "d86ada2c-d5f2-40de-afec-d28ca2baa942",
+  "original_query": "\"Get the current weather in Singapore and Mumbai and compare the temperatures\"",
+  "perception": {
+    "entities": [
+      "Singapore",
+      "Mumbai",
+      "temperature"
+    ],
+    "result_requirement": "Comparison of current temperatures in Singapore and Mumbai.",
+    "original_goal_achieved": false,
+    "reasoning": "The user wants to compare the current temperatures in Singapore and Mumbai. This requires fetching weather data for both locations and then comparing the temperature values. This is not directly achievable without using tools to fetch the weather data.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The query requires external data (weather) to be fetched. Therefore, no local goal is achieved at this stage.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Use duckduckgo_search_results to find the current weather in Singapore and Mumbai.",
+        "Step 1: Extract the temperature from the search results for both locations.",
+        "Step 2: Compare the temperatures and present the findings."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Use duckduckgo_search_results to find the current weather in Singapore and Mumbai.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "singapore_weather = duckduckgo_search_results(\"current weather in Singapore\", 1)\nmumbai_weather = duckduckgo_search_results(\"current weather in Mumbai\", 1)\nreturn singapore_weather, mumbai_weather"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "('Found 1 search results:\\n\\n1. Singapore, Central Singapore, Singapore Current Weather | AccuWeather\\n   URL: https://www.accuweather.com/en/sg/singapore/300597/current-weather/300597\\n   Summary: CurrentweatherinSingapore, CentralSingapore,Singapore. Checkcurrentconditions inSingapore, CentralSingapore,Singaporewith radar, hourly, and more.\\n', 'Found 1 search results:\\n\\n1. Mumbai, Maharashtra, India Weather Forecast | AccuWeather\\n   URL: https://www.accuweather.com/en/in/mumbai/204842/weather-forecast/204842\\n   Summary: Mumbai, Maharashtra, IndiaWeatherForecast, withcurrentconditions, wind, air quality, and what to expect for the next 3 days.\\n')",
+            "execution_time": "2025-06-11 00:43:55",
+            "total_time": "12.223"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "Singapore",
+              "Mumbai",
+              "AccuWeather"
+            ],
+            "result_requirement": "Extract temperature information from the AccuWeather search results for Singapore and Mumbai.",
+            "original_goal_achieved": false,
+            "reasoning": "The search results provide links to AccuWeather for both locations. The next step is to extract the temperature, which is necessary to achieve the final goal of comparing temperatures.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The search for Singapore and Mumbai weather on AccuWeather was successful, providing relevant URLs and summaries.",
+            "last_tooluse_summary": "duckduckgo_search_results success",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.7",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    },
+    {
+      "plan_text": [
+        "Step 0: Use duckduckgo_search_results to find the current weather in Singapore and Mumbai.",
+        "Step 1: Extract the temperature from the search results for both locations by fetching the content of the URLs and then extracting relevant temperature information.",
+        "Step 2: Compare the temperatures and present the findings."
+      ],
+      "steps": [
+        {
+          "index": 1,
+          "description": "Extract the temperature from the search results for both locations by fetching the content of the URLs and then extracting relevant temperature information.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "singapore_url = \"https://www.accuweather.com/en/sg/singapore/300597/current-weather/300597\"\nmumbai_url = \"https://www.accuweather.com/en/in/mumbai/204842/weather-forecast/204842\"\nsingapore_html = download_raw_html_from_url(singapore_url)\nmumbai_html = download_raw_html_from_url(mumbai_url)\nreturn singapore_html, mumbai_html"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "('Singapore, Central Singapore, Singapore Current Weather | AccuWeather Go Back For Business | Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Singapore, Central Singapore 27\u00b0C Location Chevron down Location News Videos Use Current Location Recent Singapore Central Singapore 27\u00b0 No results found. Try searching for a city, zip code or point of interest. settings Singapore, Central Singapore Weather Today WinterCast Local {stormName} Tracker Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Around the Globe Hurricane Tracker Radar & Maps News News & Features Astronomy Business Climate Health Recreation Sports Travel For Business Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Video Today Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Wednesday, June 11 Current Weather 3:14 AM 27\u00b0C Mostly cloudy RealFeel\u00ae 33\u00b0 Hot RealFeel Guide Hot 32\u00b0 to 37\u00b0 Caution advised. Possible danger of dehydration, heat stroke, heat exhaustion and heat cramps if outside for extended periods, and especially while doing strenuous activities. LEARN MORE RealFeel\u00ae 33\u00b0 Wind E 2 km/h Wind Gusts 2 km/h Humidity 83% Indoor Humidity 83% (Extremely Humid) Dew Point 24\u00b0 C Pressure \u2193 1009 mb Cloud Cover 85% Visibility 16 km Cloud Ceiling 4000 m Day 6/11 33\u00b0Hi RealFeel\u00ae 37\u00b0 Hot RealFeel Guide Hot 32\u00b0 to 37\u00b0 Caution advised. Possible danger of dehydration, heat stroke, heat exhaustion and heat cramps if outside for extended periods, and especially while doing strenuous activities. LEARN MORE RealFeel Shade\u2122 35\u00b0 Hot RealFeel Guide Hot 32\u00b0 to 37\u00b0 Caution advised. Possible danger of dehydration, heat stroke, heat exhaustion and heat cramps if outside for extended periods, and especially while doing strenuous activities. LEARN MORE Mostly cloudy Max UV Index4 (Moderate) AccuLumen Brightness Index\u21221 (Dark) WindSSW 9 km/h Wind Gusts28 km/h Probability of Precipitation25% Probability of Thunderstorms6% Precipitation0.0 mm Cloud Cover99% Morning Afternoon Night 6/11 26\u00b0Lo RealFeel\u00ae 31\u00b0 Very Warm Partly cloudy WindSSE 7 km/h Wind Gusts24 km/h Probability of Precipitation17% Probability of Thunderstorms1% Precipitation0.0 mm Cloud Cover77% Evening Overnight Sun & Moon 12 hrs 12 mins Rise 6:58 AM Set 7:10 PM Full Moon Rise 7:14 PM Set 7:33 AM Temperature History 6/11 High Low Forecast 33\u00b0 26\u00b0 Average 31\u00b0 24\u00b0 Last Year 33\u00b0 27\u00b0 Further Ahead Hourly Daily Monthly Around the Globe Hurricane Tracker Radar & Maps News Video Top Stories Severe Weather Downpours to unleash flooding in Texas, Oklahoma and Arkansas 1 hour ago Hurricane A hurricane has never crossed the equator. Here\\'s why. 5 hours ago Astronomy Tonight: Strawberry Moon to delight stargazers 7 hours ago Weather Forecasts Warm, drier stretch of weather coming to the Northeast 1 hour ago Hurricane Pacific keeps churning out tropical storms, while Atlantic sleeps 30 minutes ago More Stories Featured Stories Astronomy SpaceX rocket debris litters Mexico beach, threatens environment 1 day ago Weather News Maritime mystery solved after shipwreck discovered off UK coast 2 days ago Health Salmonella outbreak linked to eggs sickens people in 7 states 2 days ago Astronomy \\'Zero shadow day\\' makes photos look like AI 1 day ago Astronomy Surprising study found hints of biological activity on distant planet 2 days ago World Asia Singapore Central Singapore Singapore Weather Near Singapore: Bukit Batok New Town, South West Hougang, North East Serangoon, North East Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News \u00a9 2025 AccuWeather, Inc. \"AccuWeather\" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved. Terms of Use | Privacy Policy | Cookie Policy ... ... ... ... ...', 'Mumbai, Maharashtra, India Weather Forecast | AccuWeather Go Back For Business | Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Mumbai, Maharashtra 29\u00b0C Location Chevron down Location News Videos Use Current Location Recent Mumbai Maharashtra 29\u00b0 No results found. Try searching for a city, zip code or point of interest. settings Mumbai, Maharashtra Weather Today WinterCast Local {stormName} Tracker Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Around the Globe Hurricane Tracker Severe Weather Radar & Maps News News & Features Astronomy Business Climate Health Recreation Sports Travel For Business Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Video Today Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Today\\'s Weather Wed, Jun 11 Partly sunny Hi: 34\u00b0 Tonight: Cloudy Lo: 28\u00b0 Current Weather 12:44 AM 29\u00b0C RealFeel\u00ae 34\u00b0 Cloudy More Details Wind W 15 km/h Wind Gusts 25 km/h Air Quality Poor Looking Ahead Rain, some heavy, and thunderstorms to affect the area from late Saturday night into late Thursday night Mumbai Weather Radar Static Radar Temporarily Unavailable Thank you for your patience as we work to get everything up and running again. Refresh Page Clouds Temperature Hourly Weather Chevron left 1 AM 29\u00b0 7% 2 AM 29\u00b0 7% 3 AM 29\u00b0 7% 4 AM 29\u00b0 7% 5 AM 29\u00b0 7% 6 AM 29\u00b0 7% 7 AM 30\u00b0 6% 8 AM 30\u00b0 6% 9 AM 31\u00b0 6% 10 AM 32\u00b0 6% 11 AM 32\u00b0 6% 12 PM 33\u00b0 5% Chevron right 10-Day Weather Forecast Today 6/11 34\u00b0 28\u00b0 Partly sunny Night: Cloudy 24% Thu 6/12 33\u00b0 28\u00b0 A t-storm around in the a.m. Cloudy 40% Fri 6/13 33\u00b0 27\u00b0 A t-storm around in the a.m. Cloudy, a little rain late 40% Sat 6/14 33\u00b0 27\u00b0 Periods of rain Cloudy with late-night rain 91% Sun 6/15 33\u00b0 27\u00b0 Rain, some heavy Rain, becoming heavy at times 98% Mon 6/16 30\u00b0 26\u00b0 Rain and a thunderstorm Rain 70% Tue 6/17 32\u00b0 29\u00b0 Rain Warm with occasional rain 75% Wed 6/18 33\u00b0 28\u00b0 Rain Periods of rain 76% Thu 6/19 33\u00b0 27\u00b0 Rain Rain 78% Fri 6/20 31\u00b0 28\u00b0 Rain Rain 75% Sun & Moon 13 hrs 16 mins Rise 6:00 AM Set 7:16 PM Full Moon Rise 7:34 PM Set 6:30 AM Air Quality See More Air Quality Poor The air has reached a high level of pollution and is unhealthy for sensitive groups. Reduce time spent outside if you are feeling symptoms such as difficulty breathing or throat irritation. Allergy Outlook See All Dust & Dander Extreme Data is not supported in this location Top Stories Severe Weather Downpours to unleash flooding in Texas, Oklahoma and Arkansas 1 hour ago Hurricane A hurricane has never crossed the equator. Here\\'s why. 5 hours ago Astronomy Tonight: Strawberry Moon to delight stargazers 7 hours ago Weather Forecasts Warm, drier stretch of weather coming to the Northeast 1 hour ago Hurricane Pacific keeps churning out tropical storms, while Atlantic sleeps 31 minutes ago More Stories Featured Stories Astronomy SpaceX rocket debris litters Mexico beach, threatens environment 1 day ago Weather News Maritime mystery solved after shipwreck discovered off UK coast 2 days ago Health Salmonella outbreak linked to eggs sickens people in 7 states 2 days ago Astronomy \\'Zero shadow day\\' makes photos look like AI 1 day ago Astronomy Surprising study found hints of biological activity on distant planet 2 days ago World Asia India Maharashtra Mumbai Weather Near Mumbai: Kalyan-Dombivali, Maharashtra Thane, Maharashtra Vasai, Maharashtra Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News \u00a9 2025 AccuWeather, Inc. \"AccuWeather\" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved. Terms of Use | Privacy Policy | Cookie Policy ... ... ... ... ...')",
+            "execution_time": "2025-06-11 00:44:19",
+            "total_time": "14.875"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "Singapore",
+              "Mumbai",
+              "27\u00b0C (Singapore)",
+              "29\u00b0C (Mumbai)"
+            ],
+            "result_requirement": "Current temperatures in Singapore and Mumbai.",
+            "original_goal_achieved": true,
+            "reasoning": "The search results provide the current temperatures for both Singapore and Mumbai, fulfilling the original query.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The search results successfully retrieved the current weather information for both locations, including the temperatures.",
+            "last_tooluse_summary": "duckduckgo_search_results success",
+            "solution_summary": "The current temperature in Singapore is 27\u00b0C, and in Mumbai, it is 29\u00b0C.",
+            "confidence": "1.0",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "d86ada2c-d5f2-40de-afec-d28ca2baa942",
+    "query": "\"Get the current weather in Singapore and Mumbai and compare the temperatures\"",
+    "final_plan": [
+      "Step 0: Use duckduckgo_search_results to find the current weather in Singapore and Mumbai.",
+      "Step 1: Extract the temperature from the search results for both locations by fetching the content of the URLs and then extracting relevant temperature information.",
+      "Step 2: Compare the temperatures and present the findings."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Use duckduckgo_search_results to find the current weather in Singapore and Mumbai.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "singapore_weather = duckduckgo_search_results(\"current weather in Singapore\", 1)\nmumbai_weather = duckduckgo_search_results(\"current weather in Mumbai\", 1)\nreturn singapore_weather, mumbai_weather"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "('Found 1 search results:\\n\\n1. Singapore, Central Singapore, Singapore Current Weather | AccuWeather\\n   URL: https://www.accuweather.com/en/sg/singapore/300597/current-weather/300597\\n   Summary: CurrentweatherinSingapore, CentralSingapore,Singapore. Checkcurrentconditions inSingapore, CentralSingapore,Singaporewith radar, hourly, and more.\\n', 'Found 1 search results:\\n\\n1. Mumbai, Maharashtra, India Weather Forecast | AccuWeather\\n   URL: https://www.accuweather.com/en/in/mumbai/204842/weather-forecast/204842\\n   Summary: Mumbai, Maharashtra, IndiaWeatherForecast, withcurrentconditions, wind, air quality, and what to expect for the next 3 days.\\n')",
+          "execution_time": "2025-06-11 00:43:55",
+          "total_time": "12.223"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "Singapore",
+            "Mumbai",
+            "AccuWeather"
+          ],
+          "result_requirement": "Extract temperature information from the AccuWeather search results for Singapore and Mumbai.",
+          "original_goal_achieved": false,
+          "reasoning": "The search results provide links to AccuWeather for both locations. The next step is to extract the temperature, which is necessary to achieve the final goal of comparing temperatures.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The search for Singapore and Mumbai weather on AccuWeather was successful, providing relevant URLs and summaries.",
+          "last_tooluse_summary": "duckduckgo_search_results success",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.7",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      },
+      {
+        "index": 1,
+        "description": "Extract the temperature from the search results for both locations by fetching the content of the URLs and then extracting relevant temperature information.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "singapore_url = \"https://www.accuweather.com/en/sg/singapore/300597/current-weather/300597\"\nmumbai_url = \"https://www.accuweather.com/en/in/mumbai/204842/weather-forecast/204842\"\nsingapore_html = download_raw_html_from_url(singapore_url)\nmumbai_html = download_raw_html_from_url(mumbai_url)\nreturn singapore_html, mumbai_html"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "('Singapore, Central Singapore, Singapore Current Weather | AccuWeather Go Back For Business | Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Singapore, Central Singapore 27\u00b0C Location Chevron down Location News Videos Use Current Location Recent Singapore Central Singapore 27\u00b0 No results found. Try searching for a city, zip code or point of interest. settings Singapore, Central Singapore Weather Today WinterCast Local {stormName} Tracker Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Around the Globe Hurricane Tracker Radar & Maps News News & Features Astronomy Business Climate Health Recreation Sports Travel For Business Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Video Today Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Wednesday, June 11 Current Weather 3:14 AM 27\u00b0C Mostly cloudy RealFeel\u00ae 33\u00b0 Hot RealFeel Guide Hot 32\u00b0 to 37\u00b0 Caution advised. Possible danger of dehydration, heat stroke, heat exhaustion and heat cramps if outside for extended periods, and especially while doing strenuous activities. LEARN MORE RealFeel\u00ae 33\u00b0 Wind E 2 km/h Wind Gusts 2 km/h Humidity 83% Indoor Humidity 83% (Extremely Humid) Dew Point 24\u00b0 C Pressure \u2193 1009 mb Cloud Cover 85% Visibility 16 km Cloud Ceiling 4000 m Day 6/11 33\u00b0Hi RealFeel\u00ae 37\u00b0 Hot RealFeel Guide Hot 32\u00b0 to 37\u00b0 Caution advised. Possible danger of dehydration, heat stroke, heat exhaustion and heat cramps if outside for extended periods, and especially while doing strenuous activities. LEARN MORE RealFeel Shade\u2122 35\u00b0 Hot RealFeel Guide Hot 32\u00b0 to 37\u00b0 Caution advised. Possible danger of dehydration, heat stroke, heat exhaustion and heat cramps if outside for extended periods, and especially while doing strenuous activities. LEARN MORE Mostly cloudy Max UV Index4 (Moderate) AccuLumen Brightness Index\u21221 (Dark) WindSSW 9 km/h Wind Gusts28 km/h Probability of Precipitation25% Probability of Thunderstorms6% Precipitation0.0 mm Cloud Cover99% Morning Afternoon Night 6/11 26\u00b0Lo RealFeel\u00ae 31\u00b0 Very Warm Partly cloudy WindSSE 7 km/h Wind Gusts24 km/h Probability of Precipitation17% Probability of Thunderstorms1% Precipitation0.0 mm Cloud Cover77% Evening Overnight Sun & Moon 12 hrs 12 mins Rise 6:58 AM Set 7:10 PM Full Moon Rise 7:14 PM Set 7:33 AM Temperature History 6/11 High Low Forecast 33\u00b0 26\u00b0 Average 31\u00b0 24\u00b0 Last Year 33\u00b0 27\u00b0 Further Ahead Hourly Daily Monthly Around the Globe Hurricane Tracker Radar & Maps News Video Top Stories Severe Weather Downpours to unleash flooding in Texas, Oklahoma and Arkansas 1 hour ago Hurricane A hurricane has never crossed the equator. Here\\'s why. 5 hours ago Astronomy Tonight: Strawberry Moon to delight stargazers 7 hours ago Weather Forecasts Warm, drier stretch of weather coming to the Northeast 1 hour ago Hurricane Pacific keeps churning out tropical storms, while Atlantic sleeps 30 minutes ago More Stories Featured Stories Astronomy SpaceX rocket debris litters Mexico beach, threatens environment 1 day ago Weather News Maritime mystery solved after shipwreck discovered off UK coast 2 days ago Health Salmonella outbreak linked to eggs sickens people in 7 states 2 days ago Astronomy \\'Zero shadow day\\' makes photos look like AI 1 day ago Astronomy Surprising study found hints of biological activity on distant planet 2 days ago World Asia Singapore Central Singapore Singapore Weather Near Singapore: Bukit Batok New Town, South West Hougang, North East Serangoon, North East Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News \u00a9 2025 AccuWeather, Inc. \"AccuWeather\" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved. Terms of Use | Privacy Policy | Cookie Policy ... ... ... ... ...', 'Mumbai, Maharashtra, India Weather Forecast | AccuWeather Go Back For Business | Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Mumbai, Maharashtra 29\u00b0C Location Chevron down Location News Videos Use Current Location Recent Mumbai Maharashtra 29\u00b0 No results found. Try searching for a city, zip code or point of interest. settings Mumbai, Maharashtra Weather Today WinterCast Local {stormName} Tracker Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Around the Globe Hurricane Tracker Severe Weather Radar & Maps News News & Features Astronomy Business Climate Health Recreation Sports Travel For Business Warnings Data Suite Newsletters Advertising Superior Accuracy\u2122 Video Today Hourly Daily Radar MinuteCast Monthly Air Quality Health & Activities Today\\'s Weather Wed, Jun 11 Partly sunny Hi: 34\u00b0 Tonight: Cloudy Lo: 28\u00b0 Current Weather 12:44 AM 29\u00b0C RealFeel\u00ae 34\u00b0 Cloudy More Details Wind W 15 km/h Wind Gusts 25 km/h Air Quality Poor Looking Ahead Rain, some heavy, and thunderstorms to affect the area from late Saturday night into late Thursday night Mumbai Weather Radar Static Radar Temporarily Unavailable Thank you for your patience as we work to get everything up and running again. Refresh Page Clouds Temperature Hourly Weather Chevron left 1 AM 29\u00b0 7% 2 AM 29\u00b0 7% 3 AM 29\u00b0 7% 4 AM 29\u00b0 7% 5 AM 29\u00b0 7% 6 AM 29\u00b0 7% 7 AM 30\u00b0 6% 8 AM 30\u00b0 6% 9 AM 31\u00b0 6% 10 AM 32\u00b0 6% 11 AM 32\u00b0 6% 12 PM 33\u00b0 5% Chevron right 10-Day Weather Forecast Today 6/11 34\u00b0 28\u00b0 Partly sunny Night: Cloudy 24% Thu 6/12 33\u00b0 28\u00b0 A t-storm around in the a.m. Cloudy 40% Fri 6/13 33\u00b0 27\u00b0 A t-storm around in the a.m. Cloudy, a little rain late 40% Sat 6/14 33\u00b0 27\u00b0 Periods of rain Cloudy with late-night rain 91% Sun 6/15 33\u00b0 27\u00b0 Rain, some heavy Rain, becoming heavy at times 98% Mon 6/16 30\u00b0 26\u00b0 Rain and a thunderstorm Rain 70% Tue 6/17 32\u00b0 29\u00b0 Rain Warm with occasional rain 75% Wed 6/18 33\u00b0 28\u00b0 Rain Periods of rain 76% Thu 6/19 33\u00b0 27\u00b0 Rain Rain 78% Fri 6/20 31\u00b0 28\u00b0 Rain Rain 75% Sun & Moon 13 hrs 16 mins Rise 6:00 AM Set 7:16 PM Full Moon Rise 7:34 PM Set 6:30 AM Air Quality See More Air Quality Poor The air has reached a high level of pollution and is unhealthy for sensitive groups. Reduce time spent outside if you are feeling symptoms such as difficulty breathing or throat irritation. Allergy Outlook See All Dust & Dander Extreme Data is not supported in this location Top Stories Severe Weather Downpours to unleash flooding in Texas, Oklahoma and Arkansas 1 hour ago Hurricane A hurricane has never crossed the equator. Here\\'s why. 5 hours ago Astronomy Tonight: Strawberry Moon to delight stargazers 7 hours ago Weather Forecasts Warm, drier stretch of weather coming to the Northeast 1 hour ago Hurricane Pacific keeps churning out tropical storms, while Atlantic sleeps 31 minutes ago More Stories Featured Stories Astronomy SpaceX rocket debris litters Mexico beach, threatens environment 1 day ago Weather News Maritime mystery solved after shipwreck discovered off UK coast 2 days ago Health Salmonella outbreak linked to eggs sickens people in 7 states 2 days ago Astronomy \\'Zero shadow day\\' makes photos look like AI 1 day ago Astronomy Surprising study found hints of biological activity on distant planet 2 days ago World Asia India Maharashtra Mumbai Weather Near Mumbai: Kalyan-Dombivali, Maharashtra Thane, Maharashtra Vasai, Maharashtra Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News Company Proven Superior Accuracy About AccuWeather Digital Advertising Careers Press Contact Us Products & Services For Business For Partners For Advertising AccuWeather APIs AccuWeather Connect RealFeel\u00ae and RealFeel Shade\u2122 Personal Weather Stations Apps & Downloads iPhone App Android App See all Apps & Downloads Subscription Services AccuWeather Premium AccuWeather Professional More AccuWeather Ready Business Health Hurricane Leisure and Recreation Severe Weather Space and Astronomy Sports Travel Weather News \u00a9 2025 AccuWeather, Inc. \"AccuWeather\" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved. Terms of Use | Privacy Policy | Cookie Policy ... ... ... ... ...')",
+          "execution_time": "2025-06-11 00:44:19",
+          "total_time": "14.875"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "Singapore",
+            "Mumbai",
+            "27\u00b0C (Singapore)",
+            "29\u00b0C (Mumbai)"
+          ],
+          "result_requirement": "Current temperatures in Singapore and Mumbai.",
+          "original_goal_achieved": true,
+          "reasoning": "The search results provide the current temperatures for both Singapore and Mumbai, fulfilling the original query.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The search results successfully retrieved the current weather information for both locations, including the temperatures.",
+          "last_tooluse_summary": "duckduckgo_search_results success",
+          "solution_summary": "The current temperature in Singapore is 27\u00b0C, and in Mumbai, it is 29\u00b0C.",
+          "confidence": "1.0",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The current temperature in Singapore is 27\u00b0C, and in Mumbai, it is 29\u00b0C.",
+    "confidence": "1.0",
+    "reasoning_note": "The search results provide the current temperatures for both Singapore and Mumbai, fulfilling the original query."
+  },
+  "_session_id_short": "d86ada2c"
+}

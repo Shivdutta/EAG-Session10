@@ -1,0 +1,309 @@
+{
+  "session_id": "29999baf-00d3-4f3d-bb24-de1ce896b1c9",
+  "original_query": "\"Find the lyrics to the song 'Yesterday' by The Beatles using DuckDuckGo and format them in markdown\"",
+  "perception": {
+    "entities": [
+      "Yesterday",
+      "The Beatles",
+      "DuckDuckGo",
+      "lyrics",
+      "markdown"
+    ],
+    "result_requirement": "The lyrics to the song 'Yesterday' by The Beatles, formatted in markdown.",
+    "original_goal_achieved": false,
+    "reasoning": "The user wants to find lyrics for a song and format them in markdown. This requires using a search engine to find the lyrics and then formatting them. The goal is not achievable without using external tools.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The initial query needs to be processed by first searching for the lyrics and then formatting them. No local goal is achieved at this stage.",
+    "last_tooluse_summary": "Not applicable.",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Use DuckDuckGo to search for the lyrics of 'Yesterday' by The Beatles.",
+        "Step 1: Format the lyrics in markdown.",
+        "Step 2: Output the formatted lyrics."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Search DuckDuckGo for the lyrics of 'Yesterday' by The Beatles.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = duckduckgo_search_results(\"Yesterday The Beatles lyrics\", 3)\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "Found 3 search results:\n\n1. The Beatles - Yesterday Lyrics - Genius\n   URL: https://genius.com/The-beatles-yesterday-lyrics\n   Summary: Read thelyricsand annotations of the most covered song in history, written by Paul McCartney and sung by TheBeatles. Learn about the song's origin, meaning, and trivia from the Genius community.\n\n2. The Beatles - Yesterday Lyrics | AZLyrics.com\n   URL: https://www.azlyrics.com/lyrics/beatles/yesterday.html\n   Summary: TheBeatles\"Yesterday\":Yesterdayall my troubles seemed so far away. Now it looks as though they're here to stay. Oh, I bel...\n\n3. The Beatles - Yesterday Lyrics | Lyrics.com\n   URL: https://www.lyrics.com/lyric/32277998/The%20Beatles/Yesterday\n   Summary: Find thelyricsof \"Yesterday\", a classic song by theBeatles, written by Paul McCartney and credited to Lennon-McCartney. Learn about the song's history, popularity, awards, and covers by other artists.\n",
+            "execution_time": "2025-06-11 00:42:29",
+            "total_time": "6.833"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "The Beatles",
+              "Yesterday",
+              "lyrics",
+              "Paul McCartney"
+            ],
+            "result_requirement": "Find the lyrics of the song Yesterday by The Beatles.",
+            "original_goal_achieved": false,
+            "reasoning": "The search results seem to provide links to lyrics websites. This is a necessary step towards finding the lyrics, but the lyrics themselves have not yet been extracted. Therefore, the original goal is not yet achieved.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The search for lyrics was successful in providing possible sources. The next step should be to extract lyrics from one of these sources.",
+            "last_tooluse_summary": "DuckDuckGo was successful.",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.7",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    },
+    {
+      "plan_text": [
+        "Step 0: Use DuckDuckGo to search for the lyrics of 'Yesterday' by The Beatles.",
+        "Step 1: Extract the lyrics from the URL 'https://www.azlyrics.com/lyrics/beatles/yesterday.html' using convert_webpage_url_into_markdown.",
+        "Step 2: Format the extracted lyrics in markdown.",
+        "Step 3: Output the formatted lyrics."
+      ],
+      "steps": [
+        {
+          "index": 1,
+          "description": "Extract the lyrics from the URL 'https://www.azlyrics.com/lyrics/beatles/yesterday.html' using convert_webpage_url_into_markdown.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = convert_webpage_url_into_markdown(\"https://www.azlyrics.com/lyrics/beatles/yesterday.html\")\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "# \"Yesterday\" lyrics\n\n\n**\"Yesterday\"**\nYesterday all my troubles seemed so far away.\n\nNow it looks as though they're here to stay.\n\nOh, I believe in yesterday.\n\n\nSuddenly, I'm not half the man I used to be.\n\nThere's a shadow hanging over me.\n\nOh, yesterday came suddenly.\n\n\nWhy she had to go?\n\nI don't know, she wouldn't say.\n\nI said something wrong.\n\nNow I long for yesterday.\n\n\nYesterday love was such an easy game to play.\n\nNow I need a place to hide away.\n\nOh, I believe in yesterday.\n\n\nWhy she had to go?\n\nI don't know, she wouldn't say.\n\nI said something wrong.\n\nNow I long for yesterday.\n\n\nYesterday love was such an easy game to play.\n\nNow I need a place to hide away.\n\nOh, I believe in yesterday.\n\n\nMm mm mm mm mm mm mm.\n\n\nThanks to Tony Blase for correcting these lyrics.\n\n\n\nWriter(s): John Lennon, Paul McCartney\n\n\nPaul McCartney composed the entire melody of \"Yesterday\" in a dream. Upon waking, he hurried to a piano and played the tune in order not to forget it.\n\nPaul McCartney wasn't sure that the melody was original when he first came up with it, so, he asked several people to be sure that he hadn't plagiarised it.\n\nJohn Lennon made a reference to \"Yesterday\" in his song\n\n\"How Do You Sleep?\" on his 1971 album \"Imagine\". The song appears to attack McCartney having the line\n\n*\"The only thing you done was yesterday, but since you've gone you're just another day\"* with a reference to another McCartney's song\n\n\"Another Day\".\n\n\"Yesterday\" is one of the most recorded songs in the history of popular music. Its entry in Guinness World Records states that, by January 1986, 1,600 cover versions had been made.\n\nIn 2012 the BBC reported that \"Yesterday\" remained the fourth most successful song of all-time in terms of royalties paid, having amassed a total of 19.5 million pounds in payments.\n\n- AZLyrics\n- B\n- The Beatles Lyrics",
+            "execution_time": "2025-06-11 00:42:47",
+            "total_time": "16.604"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "Yesterday",
+              "The Beatles",
+              "lyrics"
+            ],
+            "result_requirement": "Formatted lyrics of the song 'Yesterday' by The Beatles in markdown format.",
+            "original_goal_achieved": false,
+            "reasoning": "The lyrics have been extracted, which is a step towards formatting and outputting them. The original goal is not yet achieved as the lyrics need to be formatted in markdown.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The lyrics extraction was successful. This is a necessary step towards achieving the overall goal.",
+            "last_tooluse_summary": "convert_webpage_url_into_markdown - success",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.9",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    },
+    {
+      "plan_text": [
+        "Step 0: Use DuckDuckGo to search for the lyrics of 'Yesterday' by The Beatles.",
+        "Step 1: Extract the lyrics from the URL 'https://www.azlyrics.com/lyrics/beatles/yesterday.html' using convert_webpage_url_into_markdown.",
+        "Step 2: Format the extracted lyrics in markdown.",
+        "Step 3: Output the formatted lyrics."
+      ],
+      "steps": [
+        {
+          "index": 2,
+          "description": "Format the extracted lyrics in markdown.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = \"\"\"# Yesterday\n\nYesterday, all my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday\n\nSuddenly, I'm not half the man I used to be\nThere's a shadow hanging over me\nOh, yesterday came suddenly\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nMm mm mm mm mm mm mm\"\"\"\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "# Yesterday\n\nYesterday, all my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday\n\nSuddenly, I'm not half the man I used to be\nThere's a shadow hanging over me\nOh, yesterday came suddenly\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nMm mm mm mm mm mm mm",
+            "execution_time": "2025-06-11 00:43:10",
+            "total_time": "0.001"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "Lyrics",
+              "Yesterday",
+              "The Beatles"
+            ],
+            "result_requirement": "Formatted lyrics of Yesterday by The Beatles in markdown.",
+            "original_goal_achieved": true,
+            "reasoning": "The lyrics have been extracted and are available. Since the final step is to format the lyrics in markdown and output them, the original goal is achieved.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The lyrics were successfully obtained, meaning the prior step (extraction) was successful and this represents the final needed output.",
+            "last_tooluse_summary": "convert_webpage_url_into_markdown: success",
+            "solution_summary": "The lyrics of 'Yesterday' by The Beatles have been extracted.",
+            "confidence": "1.0",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "29999baf-00d3-4f3d-bb24-de1ce896b1c9",
+    "query": "\"Find the lyrics to the song 'Yesterday' by The Beatles using DuckDuckGo and format them in markdown\"",
+    "final_plan": [
+      "Step 0: Use DuckDuckGo to search for the lyrics of 'Yesterday' by The Beatles.",
+      "Step 1: Extract the lyrics from the URL 'https://www.azlyrics.com/lyrics/beatles/yesterday.html' using convert_webpage_url_into_markdown.",
+      "Step 2: Format the extracted lyrics in markdown.",
+      "Step 3: Output the formatted lyrics."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Search DuckDuckGo for the lyrics of 'Yesterday' by The Beatles.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = duckduckgo_search_results(\"Yesterday The Beatles lyrics\", 3)\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "Found 3 search results:\n\n1. The Beatles - Yesterday Lyrics - Genius\n   URL: https://genius.com/The-beatles-yesterday-lyrics\n   Summary: Read thelyricsand annotations of the most covered song in history, written by Paul McCartney and sung by TheBeatles. Learn about the song's origin, meaning, and trivia from the Genius community.\n\n2. The Beatles - Yesterday Lyrics | AZLyrics.com\n   URL: https://www.azlyrics.com/lyrics/beatles/yesterday.html\n   Summary: TheBeatles\"Yesterday\":Yesterdayall my troubles seemed so far away. Now it looks as though they're here to stay. Oh, I bel...\n\n3. The Beatles - Yesterday Lyrics | Lyrics.com\n   URL: https://www.lyrics.com/lyric/32277998/The%20Beatles/Yesterday\n   Summary: Find thelyricsof \"Yesterday\", a classic song by theBeatles, written by Paul McCartney and credited to Lennon-McCartney. Learn about the song's history, popularity, awards, and covers by other artists.\n",
+          "execution_time": "2025-06-11 00:42:29",
+          "total_time": "6.833"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "The Beatles",
+            "Yesterday",
+            "lyrics",
+            "Paul McCartney"
+          ],
+          "result_requirement": "Find the lyrics of the song Yesterday by The Beatles.",
+          "original_goal_achieved": false,
+          "reasoning": "The search results seem to provide links to lyrics websites. This is a necessary step towards finding the lyrics, but the lyrics themselves have not yet been extracted. Therefore, the original goal is not yet achieved.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The search for lyrics was successful in providing possible sources. The next step should be to extract lyrics from one of these sources.",
+          "last_tooluse_summary": "DuckDuckGo was successful.",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.7",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      },
+      {
+        "index": 1,
+        "description": "Extract the lyrics from the URL 'https://www.azlyrics.com/lyrics/beatles/yesterday.html' using convert_webpage_url_into_markdown.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = convert_webpage_url_into_markdown(\"https://www.azlyrics.com/lyrics/beatles/yesterday.html\")\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "# \"Yesterday\" lyrics\n\n\n**\"Yesterday\"**\nYesterday all my troubles seemed so far away.\n\nNow it looks as though they're here to stay.\n\nOh, I believe in yesterday.\n\n\nSuddenly, I'm not half the man I used to be.\n\nThere's a shadow hanging over me.\n\nOh, yesterday came suddenly.\n\n\nWhy she had to go?\n\nI don't know, she wouldn't say.\n\nI said something wrong.\n\nNow I long for yesterday.\n\n\nYesterday love was such an easy game to play.\n\nNow I need a place to hide away.\n\nOh, I believe in yesterday.\n\n\nWhy she had to go?\n\nI don't know, she wouldn't say.\n\nI said something wrong.\n\nNow I long for yesterday.\n\n\nYesterday love was such an easy game to play.\n\nNow I need a place to hide away.\n\nOh, I believe in yesterday.\n\n\nMm mm mm mm mm mm mm.\n\n\nThanks to Tony Blase for correcting these lyrics.\n\n\n\nWriter(s): John Lennon, Paul McCartney\n\n\nPaul McCartney composed the entire melody of \"Yesterday\" in a dream. Upon waking, he hurried to a piano and played the tune in order not to forget it.\n\nPaul McCartney wasn't sure that the melody was original when he first came up with it, so, he asked several people to be sure that he hadn't plagiarised it.\n\nJohn Lennon made a reference to \"Yesterday\" in his song\n\n\"How Do You Sleep?\" on his 1971 album \"Imagine\". The song appears to attack McCartney having the line\n\n*\"The only thing you done was yesterday, but since you've gone you're just another day\"* with a reference to another McCartney's song\n\n\"Another Day\".\n\n\"Yesterday\" is one of the most recorded songs in the history of popular music. Its entry in Guinness World Records states that, by January 1986, 1,600 cover versions had been made.\n\nIn 2012 the BBC reported that \"Yesterday\" remained the fourth most successful song of all-time in terms of royalties paid, having amassed a total of 19.5 million pounds in payments.\n\n- AZLyrics\n- B\n- The Beatles Lyrics",
+          "execution_time": "2025-06-11 00:42:47",
+          "total_time": "16.604"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "Yesterday",
+            "The Beatles",
+            "lyrics"
+          ],
+          "result_requirement": "Formatted lyrics of the song 'Yesterday' by The Beatles in markdown format.",
+          "original_goal_achieved": false,
+          "reasoning": "The lyrics have been extracted, which is a step towards formatting and outputting them. The original goal is not yet achieved as the lyrics need to be formatted in markdown.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The lyrics extraction was successful. This is a necessary step towards achieving the overall goal.",
+          "last_tooluse_summary": "convert_webpage_url_into_markdown - success",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.9",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      },
+      {
+        "index": 2,
+        "description": "Format the extracted lyrics in markdown.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = \"\"\"# Yesterday\n\nYesterday, all my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday\n\nSuddenly, I'm not half the man I used to be\nThere's a shadow hanging over me\nOh, yesterday came suddenly\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nMm mm mm mm mm mm mm\"\"\"\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "# Yesterday\n\nYesterday, all my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday\n\nSuddenly, I'm not half the man I used to be\nThere's a shadow hanging over me\nOh, yesterday came suddenly\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nWhy she had to go? I don't know, she wouldn't say\nI said something wrong, now I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nMm mm mm mm mm mm mm",
+          "execution_time": "2025-06-11 00:43:10",
+          "total_time": "0.001"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "Lyrics",
+            "Yesterday",
+            "The Beatles"
+          ],
+          "result_requirement": "Formatted lyrics of Yesterday by The Beatles in markdown.",
+          "original_goal_achieved": true,
+          "reasoning": "The lyrics have been extracted and are available. Since the final step is to format the lyrics in markdown and output them, the original goal is achieved.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The lyrics were successfully obtained, meaning the prior step (extraction) was successful and this represents the final needed output.",
+          "last_tooluse_summary": "convert_webpage_url_into_markdown: success",
+          "solution_summary": "The lyrics of 'Yesterday' by The Beatles have been extracted.",
+          "confidence": "1.0",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The lyrics of 'Yesterday' by The Beatles have been extracted.",
+    "confidence": "1.0",
+    "reasoning_note": "The lyrics have been extracted and are available. Since the final step is to format the lyrics in markdown and output them, the original goal is achieved."
+  },
+  "_session_id_short": "29999baf"
+}

@@ -1,0 +1,131 @@
+{
+  "session_id": "0e61ea2b-3dbe-4bad-a11c-f0fe844c427b",
+  "original_query": "\"Search for 'recipe for chocolate cake' and extract the ingredients\"",
+  "perception": {
+    "entities": [
+      "recipe for chocolate cake",
+      "ingredients"
+    ],
+    "result_requirement": "A list of ingredients from a chocolate cake recipe.",
+    "original_goal_achieved": false,
+    "reasoning": "The user wants a list of ingredients for a chocolate cake recipe. This requires searching for a recipe and then extracting the ingredients. This is not immediately achievable and requires multiple steps.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The initial query requires searching and extracting information. Therefore, the local goal is not yet achieved.",
+    "last_tooluse_summary": "N/A",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Search DuckDuckGo for 'recipe for chocolate cake' and retrieve the top 3 results.",
+        "Step 1: Convert the URLs from the search results into markdown.",
+        "Step 2: Extract the ingredients from the markdown content and present the list to the user."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Search DuckDuckGo for 'recipe for chocolate cake' and retrieve the top 3 results.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = duckduckgo_search_results(\"recipe for chocolate cake\", 3)\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "Found 3 search results:\n\n1. How to Make the Easiest Chocolate Cake From Scratch - Allrecipes\n   URL: https://www.allrecipes.com/article/easiest-chocolate-cake-from-scratch/\n   Summary: Learn how to bake a rich and chocolateycakewith one bowl and one pan, no mixer required. Follow the 5-starrecipe, watch the video, and get tips from Nicole McLaughlin, aka NicoleMcmom.\n\n2. Chocolate Cake - RecipeTin Eats\n   URL: https://www.recipetineats.com/chocolate-cake/\n   Summary: Learn how to make a classicchocolatecakewith cocoa powder, oil and boiling water. Thisrecipeis quick, simple and delicious, with tips for frosting and decorating.\n\n3. The BEST Moist Chocolate Cake Recipe - Scientifically Sweet\n   URL: https://scientificallysweet.com/the-best-moist-chocolate-cake/\n   Summary: I tried thechocolatecakerecipeand the super yummychocolatefrosting for the graduationcakethat I baked last Saturday. All I hear are delicious comments fr. guests especially the mom of the celebrant. I didn't think that sour cream and honey will work but the result was so smooth and just the right amount of sweetness of the frosting.\n",
+            "execution_time": "2025-06-11 00:35:33",
+            "total_time": "2.421"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "chocolate cake",
+              "recipes",
+              "Allrecipes",
+              "RecipeTin Eats",
+              "Scientifically Sweet"
+            ],
+            "result_requirement": "Information about chocolate cake recipes from search results.",
+            "original_goal_achieved": false,
+            "reasoning": "This step successfully retrieved search results for chocolate cake recipes, which is a necessary step towards providing the user with the recipe information. The search results seem relevant and provide different options for chocolate cake recipes. This moves us closer to the final goal but doesn't complete it.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The step successfully retrieved and summarized the top 3 search results for 'recipe for chocolate cake'. This provides a good starting point for extracting ingredient information in the subsequent steps.",
+            "last_tooluse_summary": "DuckDuckGo Search: success",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.8",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "0e61ea2b-3dbe-4bad-a11c-f0fe844c427b",
+    "query": "\"Search for 'recipe for chocolate cake' and extract the ingredients\"",
+    "final_plan": [
+      "Step 0: Search DuckDuckGo for 'recipe for chocolate cake' and retrieve the top 3 results.",
+      "Step 1: Convert the URLs from the search results into markdown.",
+      "Step 2: Extract the ingredients from the markdown content and present the list to the user."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Search DuckDuckGo for 'recipe for chocolate cake' and retrieve the top 3 results.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = duckduckgo_search_results(\"recipe for chocolate cake\", 3)\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "Found 3 search results:\n\n1. How to Make the Easiest Chocolate Cake From Scratch - Allrecipes\n   URL: https://www.allrecipes.com/article/easiest-chocolate-cake-from-scratch/\n   Summary: Learn how to bake a rich and chocolateycakewith one bowl and one pan, no mixer required. Follow the 5-starrecipe, watch the video, and get tips from Nicole McLaughlin, aka NicoleMcmom.\n\n2. Chocolate Cake - RecipeTin Eats\n   URL: https://www.recipetineats.com/chocolate-cake/\n   Summary: Learn how to make a classicchocolatecakewith cocoa powder, oil and boiling water. Thisrecipeis quick, simple and delicious, with tips for frosting and decorating.\n\n3. The BEST Moist Chocolate Cake Recipe - Scientifically Sweet\n   URL: https://scientificallysweet.com/the-best-moist-chocolate-cake/\n   Summary: I tried thechocolatecakerecipeand the super yummychocolatefrosting for the graduationcakethat I baked last Saturday. All I hear are delicious comments fr. guests especially the mom of the celebrant. I didn't think that sour cream and honey will work but the result was so smooth and just the right amount of sweetness of the frosting.\n",
+          "execution_time": "2025-06-11 00:35:33",
+          "total_time": "2.421"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "chocolate cake",
+            "recipes",
+            "Allrecipes",
+            "RecipeTin Eats",
+            "Scientifically Sweet"
+          ],
+          "result_requirement": "Information about chocolate cake recipes from search results.",
+          "original_goal_achieved": false,
+          "reasoning": "This step successfully retrieved search results for chocolate cake recipes, which is a necessary step towards providing the user with the recipe information. The search results seem relevant and provide different options for chocolate cake recipes. This moves us closer to the final goal but doesn't complete it.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The step successfully retrieved and summarized the top 3 search results for 'recipe for chocolate cake'. This provides a good starting point for extracting ingredient information in the subsequent steps.",
+          "last_tooluse_summary": "DuckDuckGo Search: success",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.8",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": null,
+    "confidence": 0.0,
+    "reasoning_note": ""
+  },
+  "_session_id_short": "0e61ea2b"
+}

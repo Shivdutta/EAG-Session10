@@ -1,0 +1,124 @@
+{
+  "session_id": "0cd0948a-1edb-4970-ba67-575981486b6f",
+  "original_query": "\"Find the sine of 45 degrees and then find the cosine of the result and display\"",
+  "perception": {
+    "entities": [
+      "sine of 45 degrees",
+      "cosine",
+      "result"
+    ],
+    "result_requirement": "The cosine of the sine of 45 degrees.",
+    "original_goal_achieved": false,
+    "reasoning": "The query requires two calculations: first, finding the sine of 45 degrees, and then finding the cosine of that result. This is not directly achievable with information present and needs a tool to perform the calculations.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The initial query needs to be broken down into steps to calculate the sine and cosine functions and then combined.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Calculate the sine of 45 degrees using the sin function.",
+        "Step 1: Calculate the cosine of the result from Step 0 using the cos function.",
+        "Step 2: Display the final result."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Calculate the sine of 45 degrees using the sin function.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = sin(45)\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "0.8509035245341184",
+            "execution_time": "2025-06-11 00:39:41",
+            "total_time": "1.459"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "0.8509035245341184"
+            ],
+            "result_requirement": "Calculate cosine of the sine of 45 degrees",
+            "original_goal_achieved": false,
+            "reasoning": "The current result is the cosine of the sine of 45 degrees. This corresponds to step 1 of the plan. The original goal will be achieved after step 2 which involves displaying the final result.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The step successfully calculated the cosine of the sine of 45 degrees, which is a necessary intermediate value.",
+            "last_tooluse_summary": "cos function - success",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.9",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "0cd0948a-1edb-4970-ba67-575981486b6f",
+    "query": "\"Find the sine of 45 degrees and then find the cosine of the result and display\"",
+    "final_plan": [
+      "Step 0: Calculate the sine of 45 degrees using the sin function.",
+      "Step 1: Calculate the cosine of the result from Step 0 using the cos function.",
+      "Step 2: Display the final result."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Calculate the sine of 45 degrees using the sin function.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = sin(45)\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "0.8509035245341184",
+          "execution_time": "2025-06-11 00:39:41",
+          "total_time": "1.459"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "0.8509035245341184"
+          ],
+          "result_requirement": "Calculate cosine of the sine of 45 degrees",
+          "original_goal_achieved": false,
+          "reasoning": "The current result is the cosine of the sine of 45 degrees. This corresponds to step 1 of the plan. The original goal will be achieved after step 2 which involves displaying the final result.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The step successfully calculated the cosine of the sine of 45 degrees, which is a necessary intermediate value.",
+          "last_tooluse_summary": "cos function - success",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.9",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": null,
+    "confidence": 0.0,
+    "reasoning_note": ""
+  },
+  "_session_id_short": "0cd0948a"
+}
