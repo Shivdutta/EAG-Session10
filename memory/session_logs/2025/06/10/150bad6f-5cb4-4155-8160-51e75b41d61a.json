@@ -1,0 +1,33 @@
+{
+  "session_id": "150bad6f-5cb4-4155-8160-51e75b41d61a",
+  "original_query": "\"Mine the string 'this is a test'\"",
+  "perception": {
+    "entities": [
+      "string 'this is a test'"
+    ],
+    "result_requirement": "The extracted value of the string 'this is a test'",
+    "original_goal_achieved": true,
+    "reasoning": "The user wants to extract the string 'this is a test'. Since the string is already provided, the goal is achieved.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The string to be mined is directly provided, so no tool is needed.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "The string to be mined is 'this is a test'.",
+    "confidence": "1.0",
+    "human_input": null
+  },
+  "plan_versions": [],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "150bad6f-5cb4-4155-8160-51e75b41d61a",
+    "query": "\"Mine the string 'this is a test'\"",
+    "final_plan": [],
+    "final_steps": [],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The string to be mined is 'this is a test'.",
+    "confidence": "1.0",
+    "reasoning_note": "The user wants to extract the string 'this is a test'. Since the string is already provided, the goal is achieved."
+  },
+  "_session_id_short": "150bad6f"
+}

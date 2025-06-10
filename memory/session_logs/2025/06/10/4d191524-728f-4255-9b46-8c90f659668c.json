@@ -1,0 +1,34 @@
+{
+  "session_id": "4d191524-728f-4255-9b46-8c90f659668c",
+  "original_query": "\"Add 12 and 134\"",
+  "perception": {
+    "entities": [
+      "12",
+      "134"
+    ],
+    "result_requirement": "Numerical result of the addition of 12 and 134.",
+    "original_goal_achieved": true,
+    "reasoning": "The user query is a simple arithmetic question. It can be directly answered without using any tools or memory lookups. The goal is achievable.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The addition can be directly calculated.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "12 added to 134 is 146.",
+    "confidence": "1.0",
+    "human_input": null
+  },
+  "plan_versions": [],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "4d191524-728f-4255-9b46-8c90f659668c",
+    "query": "\"Add 12 and 134\"",
+    "final_plan": [],
+    "final_steps": [],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "12 added to 134 is 146.",
+    "confidence": "1.0",
+    "reasoning_note": "The user query is a simple arithmetic question. It can be directly answered without using any tools or memory lookups. The goal is achievable."
+  },
+  "_session_id_short": "4d191524"
+}

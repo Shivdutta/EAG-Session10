@@ -1,0 +1,128 @@
+{
+  "session_id": "3c1d5fcb-1ee7-4f08-a009-6a101c18bac5",
+  "original_query": "\"Find the current price of Bitcoin using DuckDuckGo and display it\"",
+  "perception": {
+    "entities": [
+      "Bitcoin",
+      "current price",
+      "DuckDuckGo"
+    ],
+    "result_requirement": "The current price of Bitcoin.",
+    "original_goal_achieved": false,
+    "reasoning": "The user wants to find the current price of Bitcoin using DuckDuckGo. This requires using a tool to query DuckDuckGo for the price and then extracting the price from the results. The goal is not directly achievable without using a tool.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The initial query needs to be parsed and a tool needs to be used to find the price.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Use DuckDuckGo search to find the current price of Bitcoin.",
+        "Step 1: Extract the Bitcoin price from the search results.",
+        "Step 2: Display the extracted Bitcoin price."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Search DuckDuckGo for the current price of Bitcoin.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = duckduckgo_search_results(\"current price of Bitcoin\", 1)\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "Found 1 search results:\n\n1. Bitcoin price today, BTC to USD live price, marketcap and chart ...\n   URL: https://coinmarketcap.com/currencies/bitcoin/\n   Summary: The liveBitcoinpricetoday is $106,022.71 USD with a 24-hour trading volume of $36,900,503,098.97 USD. We update our BTC to USDpricein real-time. Cryptocurrencies. ... MiningBitcoinscan be very profitable for miners, depending on thecurrenthash rate and thepriceofBitcoin.\n",
+            "execution_time": "2025-06-10 05:08:19",
+            "total_time": "1.565"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "Bitcoin",
+              "$106,022.71",
+              "BTC to USD"
+            ],
+            "result_requirement": "Current price of Bitcoin in USD.",
+            "original_goal_achieved": true,
+            "reasoning": "The search result provides the current price of Bitcoin in USD, directly answering the user's query. The price is explicitly stated in the summary.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The DuckDuckGo search successfully found a relevant result containing the Bitcoin price.",
+            "last_tooluse_summary": "DuckDuckGo search successful.",
+            "solution_summary": "The current price of Bitcoin is $106,022.71 USD.",
+            "confidence": "1.0",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "3c1d5fcb-1ee7-4f08-a009-6a101c18bac5",
+    "query": "\"Find the current price of Bitcoin using DuckDuckGo and display it\"",
+    "final_plan": [
+      "Step 0: Use DuckDuckGo search to find the current price of Bitcoin.",
+      "Step 1: Extract the Bitcoin price from the search results.",
+      "Step 2: Display the extracted Bitcoin price."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Search DuckDuckGo for the current price of Bitcoin.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = duckduckgo_search_results(\"current price of Bitcoin\", 1)\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "Found 1 search results:\n\n1. Bitcoin price today, BTC to USD live price, marketcap and chart ...\n   URL: https://coinmarketcap.com/currencies/bitcoin/\n   Summary: The liveBitcoinpricetoday is $106,022.71 USD with a 24-hour trading volume of $36,900,503,098.97 USD. We update our BTC to USDpricein real-time. Cryptocurrencies. ... MiningBitcoinscan be very profitable for miners, depending on thecurrenthash rate and thepriceofBitcoin.\n",
+          "execution_time": "2025-06-10 05:08:19",
+          "total_time": "1.565"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "Bitcoin",
+            "$106,022.71",
+            "BTC to USD"
+          ],
+          "result_requirement": "Current price of Bitcoin in USD.",
+          "original_goal_achieved": true,
+          "reasoning": "The search result provides the current price of Bitcoin in USD, directly answering the user's query. The price is explicitly stated in the summary.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The DuckDuckGo search successfully found a relevant result containing the Bitcoin price.",
+          "last_tooluse_summary": "DuckDuckGo search successful.",
+          "solution_summary": "The current price of Bitcoin is $106,022.71 USD.",
+          "confidence": "1.0",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The current price of Bitcoin is $106,022.71 USD.",
+    "confidence": "1.0",
+    "reasoning_note": "The search result provides the current price of Bitcoin in USD, directly answering the user's query. The price is explicitly stated in the summary."
+  },
+  "_session_id_short": "3c1d5fcb"
+}

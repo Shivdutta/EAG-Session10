@@ -1,0 +1,122 @@
+{
+  "session_id": "422227b0-72a8-4348-93a0-ca075b73350a",
+  "original_query": "\"Subtract 3 from 20 and then calculate the cosine of the result\"",
+  "perception": {
+    "entities": [
+      "3",
+      "20",
+      "cosine"
+    ],
+    "result_requirement": "The cosine of the result of subtracting 3 from 20.",
+    "original_goal_achieved": false,
+    "reasoning": "The query involves two mathematical operations: subtraction and calculating the cosine. This can be achieved using a calculator tool.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The initial query needs to be processed to get the final numerical result. I will need to use a calculator tool to perform the required calculations.",
+    "last_tooluse_summary": "Not Ready Yet.",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Subtract 3 from 20, then calculate the cosine of the result.",
+        "Step 1: Return the final result."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Subtract 3 from 20, then calculate the cosine of the result using available functions.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "x = subtract(20, 3)\nresult = cos(x)\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "-0.27516333805159693",
+            "execution_time": "2025-06-10 05:07:14",
+            "total_time": "1.601"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "-0.27516333805159693"
+            ],
+            "result_requirement": "The cosine of (20-3)",
+            "original_goal_achieved": true,
+            "reasoning": "The current step returns the final result of the calculation, which answers the original query.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The step successfully returned the cosine of (20-3).",
+            "last_tooluse_summary": "N/A",
+            "solution_summary": "The cosine of (20-3) is -0.27516333805159693.",
+            "confidence": "1.0",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "422227b0-72a8-4348-93a0-ca075b73350a",
+    "query": "\"Subtract 3 from 20 and then calculate the cosine of the result\"",
+    "final_plan": [
+      "Step 0: Subtract 3 from 20, then calculate the cosine of the result.",
+      "Step 1: Return the final result."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Subtract 3 from 20, then calculate the cosine of the result using available functions.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "x = subtract(20, 3)\nresult = cos(x)\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "-0.27516333805159693",
+          "execution_time": "2025-06-10 05:07:14",
+          "total_time": "1.601"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "-0.27516333805159693"
+          ],
+          "result_requirement": "The cosine of (20-3)",
+          "original_goal_achieved": true,
+          "reasoning": "The current step returns the final result of the calculation, which answers the original query.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The step successfully returned the cosine of (20-3).",
+          "last_tooluse_summary": "N/A",
+          "solution_summary": "The cosine of (20-3) is -0.27516333805159693.",
+          "confidence": "1.0",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The cosine of (20-3) is -0.27516333805159693.",
+    "confidence": "1.0",
+    "reasoning_note": "The current step returns the final result of the calculation, which answers the original query."
+  },
+  "_session_id_short": "422227b0"
+}
