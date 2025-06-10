@@ -1,4 +1,29 @@
-# Multi-Agent MCP Agentic System
+
+<div style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/White_Rose_Blanche.jpg/640px-White_Rose_Blanche.jpg'); background-size: cover; padding: 30px; color: #6a0dad; font-family: 'Courier New', monospace; font-size: 14px;">
+
+<h1>Multi-Agent MCP Agentic System</h1>
+
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#core-components">Core Components</a></li>
+<li><a href="#data-flow-in-agentlooprun">Data Flow in <code>AgentLoop.run()</code></a></li>
+<li><a href="#architecture">Architecture</a></li>
+<ul>
+<li><a href="#perception-layer">Perception Layer</a></li>
+<li><a href="#decision-layer">Decision Layer</a></li>
+</ul>
+<li><a href="#setup-and-running">Setup and Running</a></li>
+<li><a href="#human-in-the-loop-hil">Human-in-the-Loop (HIL)</a></li>
+<ul>
+<li><a href="#tool-failure-and-hil-demo">Tool Failure and HIL Demo</a></li>
+<li><a href="#step-failure-and-hil-demo">Step Failure and HIL Demo</a></li>
+</ul>
+<li><a href="#tool-performance-report">Tool Performance Report</a></li>
+<li><a href="#further-development">Further Development</a></li>
+</ul>
+
+<pre># Multi-Agent MCP Agentic System
 
 ## Table of Contents
 - [Overview](#overview)
@@ -305,3 +330,6 @@ You can check for detailed logs in ("/memory/session_log")
 *   Explore different planning strategies.
 *   Enhance memory search and retrieval.
 *   Refine perception and decision prompts for more complex scenarios.
+</pre>
+<!-- We insert everything from the actual README.md file as inner HTML -->
+</div>
