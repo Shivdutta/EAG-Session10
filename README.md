@@ -226,22 +226,36 @@ The system incorporates HIL for:
 
 # 🛠️ Tool Performance Comparative Report
 
-You can check for detailed logs in ("/memory/session_log")
-
+You can check for detailed logs in https://github.com/Shivdutta/EAG-Session10-Multi-Agent-System-/tree/main/memory/session_logs/2025/06
 
 **Comparing:**  
-- `tool_performance_status.csv` from **Run 1** and **Run 2**  
-
+- `tool_performance_status.csv` from **Run 1** and **Run 2**
 ---
 
 ## 📊 Summary Table
 
-| Metric                        | Run 1   | Run 2   |
-|------------------------------|---------|---------|
-| Total Tools Invoked          | 22      | 24      |
-| Total Invocation Count       | 84      | 87      |
-| Unique Tools                 | 22      | 24      |
-| Overall Success Rate         | ✅ 100% | ✅ 100% |
+### Run Details:
+-   Run 2
+    https://github.com/Shivdutta/EAG-Session10-Multi-Agent-System-/blob/main/performance-run2/test_queries_output.csvLinks to an external site.
+
+-   Run 1
+    https://github.com/Shivdutta/EAG-Session10-Multi-Agent-System-/blob/main/performance/test_queries_output.csv
+
+Here’s the comparison of success between the two runs:
+
+| Status  | Run 1 | Run 2 |
+|---------|-------|-------|
+| Success |  60   |  79   |
+| Failure |  44   |  25   |
+
+✅ **Run 2 outperformed Run 1**, achieving **19 more successful outputs** and reducing failures by **19 queries**.
+
+| Metric                        | Run 1     | Run 2     |
+|------------------------------|-----------|-----------|
+| Total Tools Invoked          | 23        | 23        |
+| Total Invocation Count       | 155       | 145       |
+| Unique Tools                 | 23        | 23        |
+| Overall Success Rate         | 57.69%    | 75.96%    |
 
 ---
 
