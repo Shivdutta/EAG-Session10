@@ -1,0 +1,35 @@
+{
+  "session_id": "1c751625-91d9-4471-a8de-e1f40ae0540d",
+  "original_query": "\"Subtract 3 from 20 and then calculate the cosine of the result\"",
+  "perception": {
+    "entities": [
+      "3",
+      "20",
+      "cosine"
+    ],
+    "result_requirement": "The cosine of (20 - 3)",
+    "original_goal_achieved": true,
+    "reasoning": "The query involves a simple arithmetic operation followed by a trigonometric function. These can be computed directly and the final answer provided without the need for external tools.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The query is well-defined and directly computable.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "20 - 3 = 17. The cosine of 17 radians is approximately -0.961397.",
+    "confidence": "1.0",
+    "human_input": null
+  },
+  "plan_versions": [],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "1c751625-91d9-4471-a8de-e1f40ae0540d",
+    "query": "\"Subtract 3 from 20 and then calculate the cosine of the result\"",
+    "final_plan": [],
+    "final_steps": [],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "20 - 3 = 17. The cosine of 17 radians is approximately -0.961397.",
+    "confidence": "1.0",
+    "reasoning_note": "The query involves a simple arithmetic operation followed by a trigonometric function. These can be computed directly and the final answer provided without the need for external tools."
+  },
+  "_session_id_short": "1c751625"
+}

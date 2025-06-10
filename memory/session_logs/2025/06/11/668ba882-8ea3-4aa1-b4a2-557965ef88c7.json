@@ -1,0 +1,142 @@
+{
+  "session_id": "668ba882-8ea3-4aa1-b4a2-557965ef88c7",
+  "original_query": "\"Search for 'artificial intelligence applications' and list the main applications\"",
+  "perception": {
+    "entities": [
+      "artificial intelligence applications"
+    ],
+    "result_requirement": "A list of the main applications of artificial intelligence.",
+    "original_goal_achieved": false,
+    "reasoning": "The query asks for a list of AI applications. This cannot be directly answered from known tools or memory. A search and information extraction step will be required.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The user query requires a search and information extraction to identify and list the main applications of artificial intelligence.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9",
+    "human_input": null
+  },
+  "plan_versions": [
+    {
+      "plan_text": [
+        "Step 0: Use DuckDuckGo to search for 'artificial intelligence applications' and retrieve the top 5 results.",
+        "Step 1: Convert the URLs from the search results into markdown content.",
+        "Step 2: Extract the main applications of artificial intelligence from the markdown content.",
+        "Step 3: Summarize the findings and list the main AI applications."
+      ],
+      "steps": [
+        {
+          "index": 0,
+          "description": "Search DuckDuckGo for 'artificial intelligence applications' and retrieve the top 5 results.",
+          "type": "CODE",
+          "code": {
+            "tool_name": "raw_code_block",
+            "tool_arguments": {
+              "code": "result = duckduckgo_search_results(\"artificial intelligence applications\", 5)\nreturn result"
+            }
+          },
+          "conclusion": "",
+          "execution_result": {
+            "status": "success",
+            "result": "Found 5 search results:\n\n1. Top 20 Applications of Artificial Intelligence (AI) in 2025\n   URL: https://www.geeksforgeeks.org/applications-of-ai/\n   Summary: ArtificialIntelligenceis really dominating the field of the gaming industry.ArtificialIntelligenceis used to make a human-like simulation in gaming. This enhances the gaming experience. Various modern games use real-world simulation for gaming using AI. Let's take a closer look at AIapplicationsin Gaming Sector.\n\n2. Top 24 Artificial Intelligence Applications and Uses - Simplilearn\n   URL: https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/artificial-intelligence-applications\n   Summary: Learn how AI is transforming various industries and domains, from e-commerce to healthcare, with examples andapplications. Explore the importance, types, and benefits of AI and how to upskill in this field with Simplilearn.\n\n3. 15 Amazing Real-World Applications Of AI Everyone Should Know About\n   URL: https://www.forbes.com/sites/bernardmarr/2023/05/10/15-amazing-real-world-applications-of-ai-everyone-should-know-about/\n   Summary: The future is here, and it's fueled byartificialintelligence. Read on to find out the top 15 real-worldapplicationsof AI that are redefining industries and impacting our daily lives in 2023.\n\n4. Applications of artificial intelligence - Wikipedia\n   URL: https://en.wikipedia.org/wiki/Applications_of_artificial_intelligence\n   Summary: Learn how AI is used in various fields such as internet, e-commerce, language translation, facial recognition, games, and more. Explore the benefits, challenges, and future prospects of AI technologies.\n\n5. Top 30 Applications of Artificial Intelligence (AI) in 2025\n   URL: https://www.pynetlabs.com/applications-of-artificial-intelligence/\n   Summary: Learn how AI is impacting various industries such as healthcare, finance, transportation, and retail with examples and tools. Discover the latest trends and opportunities in AI and ML with PyNet Labs' course.\n",
+            "execution_time": "2025-06-11 00:32:42",
+            "total_time": "4.155"
+          },
+          "error": null,
+          "perception": {
+            "entities": [
+              "artificial intelligence",
+              "AI applications",
+              "gaming",
+              "e-commerce",
+              "healthcare",
+              "finance",
+              "transportation",
+              "retail",
+              "language translation",
+              "facial recognition"
+            ],
+            "result_requirement": "List of main applications of artificial intelligence",
+            "original_goal_achieved": false,
+            "reasoning": "The search results provide a good overview of AI applications across different sectors. This step provides the raw data needed to identify and summarize the applications, but further steps are required to extract and list them.",
+            "local_goal_achieved": true,
+            "local_reasoning": "The step successfully retrieved the top 5 search results for 'artificial intelligence applications'. The summaries provide valuable information for the next steps.",
+            "last_tooluse_summary": "DuckDuckGo success",
+            "solution_summary": "Not ready yet",
+            "confidence": "0.7",
+            "human_input": null
+          },
+          "status": "completed",
+          "attempts": 0,
+          "was_replanned": false,
+          "parent_index": null
+        }
+      ]
+    }
+  ],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "668ba882-8ea3-4aa1-b4a2-557965ef88c7",
+    "query": "\"Search for 'artificial intelligence applications' and list the main applications\"",
+    "final_plan": [
+      "Step 0: Use DuckDuckGo to search for 'artificial intelligence applications' and retrieve the top 5 results.",
+      "Step 1: Convert the URLs from the search results into markdown content.",
+      "Step 2: Extract the main applications of artificial intelligence from the markdown content.",
+      "Step 3: Summarize the findings and list the main AI applications."
+    ],
+    "final_steps": [
+      {
+        "index": 0,
+        "description": "Search DuckDuckGo for 'artificial intelligence applications' and retrieve the top 5 results.",
+        "type": "CODE",
+        "code": {
+          "tool_name": "raw_code_block",
+          "tool_arguments": {
+            "code": "result = duckduckgo_search_results(\"artificial intelligence applications\", 5)\nreturn result"
+          }
+        },
+        "conclusion": "",
+        "execution_result": {
+          "status": "success",
+          "result": "Found 5 search results:\n\n1. Top 20 Applications of Artificial Intelligence (AI) in 2025\n   URL: https://www.geeksforgeeks.org/applications-of-ai/\n   Summary: ArtificialIntelligenceis really dominating the field of the gaming industry.ArtificialIntelligenceis used to make a human-like simulation in gaming. This enhances the gaming experience. Various modern games use real-world simulation for gaming using AI. Let's take a closer look at AIapplicationsin Gaming Sector.\n\n2. Top 24 Artificial Intelligence Applications and Uses - Simplilearn\n   URL: https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/artificial-intelligence-applications\n   Summary: Learn how AI is transforming various industries and domains, from e-commerce to healthcare, with examples andapplications. Explore the importance, types, and benefits of AI and how to upskill in this field with Simplilearn.\n\n3. 15 Amazing Real-World Applications Of AI Everyone Should Know About\n   URL: https://www.forbes.com/sites/bernardmarr/2023/05/10/15-amazing-real-world-applications-of-ai-everyone-should-know-about/\n   Summary: The future is here, and it's fueled byartificialintelligence. Read on to find out the top 15 real-worldapplicationsof AI that are redefining industries and impacting our daily lives in 2023.\n\n4. Applications of artificial intelligence - Wikipedia\n   URL: https://en.wikipedia.org/wiki/Applications_of_artificial_intelligence\n   Summary: Learn how AI is used in various fields such as internet, e-commerce, language translation, facial recognition, games, and more. Explore the benefits, challenges, and future prospects of AI technologies.\n\n5. Top 30 Applications of Artificial Intelligence (AI) in 2025\n   URL: https://www.pynetlabs.com/applications-of-artificial-intelligence/\n   Summary: Learn how AI is impacting various industries such as healthcare, finance, transportation, and retail with examples and tools. Discover the latest trends and opportunities in AI and ML with PyNet Labs' course.\n",
+          "execution_time": "2025-06-11 00:32:42",
+          "total_time": "4.155"
+        },
+        "error": null,
+        "perception": {
+          "entities": [
+            "artificial intelligence",
+            "AI applications",
+            "gaming",
+            "e-commerce",
+            "healthcare",
+            "finance",
+            "transportation",
+            "retail",
+            "language translation",
+            "facial recognition"
+          ],
+          "result_requirement": "List of main applications of artificial intelligence",
+          "original_goal_achieved": false,
+          "reasoning": "The search results provide a good overview of AI applications across different sectors. This step provides the raw data needed to identify and summarize the applications, but further steps are required to extract and list them.",
+          "local_goal_achieved": true,
+          "local_reasoning": "The step successfully retrieved the top 5 search results for 'artificial intelligence applications'. The summaries provide valuable information for the next steps.",
+          "last_tooluse_summary": "DuckDuckGo success",
+          "solution_summary": "Not ready yet",
+          "confidence": "0.7",
+          "human_input": null
+        },
+        "status": "completed",
+        "attempts": 0,
+        "was_replanned": false,
+        "parent_index": null
+      }
+    ],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": null,
+    "confidence": 0.0,
+    "reasoning_note": ""
+  },
+  "_session_id_short": "668ba882"
+}

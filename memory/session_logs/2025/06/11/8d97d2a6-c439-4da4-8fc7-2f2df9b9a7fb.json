@@ -1,0 +1,34 @@
+{
+  "session_id": "8d97d2a6-c439-4da4-8fc7-2f2df9b9a7fb",
+  "original_query": "\"What is the cosine of 180?\"",
+  "perception": {
+    "entities": [
+      "cosine",
+      "180"
+    ],
+    "result_requirement": "Numerical value of the cosine of 180 degrees",
+    "original_goal_achieved": true,
+    "reasoning": "The cosine of 180 degrees is a well-known trigonometric value. I can directly provide the answer without using any external tools.",
+    "local_goal_achieved": true,
+    "local_reasoning": "Recognized the query as a simple mathematical calculation that can be answered directly.",
+    "last_tooluse_summary": "N/A",
+    "solution_summary": "The cosine of 180 degrees is -1.",
+    "confidence": "1.0",
+    "human_input": null
+  },
+  "plan_versions": [],
+  "human_interventions": [],
+  "had_human_assistance": false,
+  "state_snapshot": {
+    "session_id": "8d97d2a6-c439-4da4-8fc7-2f2df9b9a7fb",
+    "query": "\"What is the cosine of 180?\"",
+    "final_plan": [],
+    "final_steps": [],
+    "human_interventions": [],
+    "had_human_assistance": false,
+    "final_answer": "The cosine of 180 degrees is -1.",
+    "confidence": "1.0",
+    "reasoning_note": "The cosine of 180 degrees is a well-known trigonometric value. I can directly provide the answer without using any external tools."
+  },
+  "_session_id_short": "8d97d2a6"
+}
