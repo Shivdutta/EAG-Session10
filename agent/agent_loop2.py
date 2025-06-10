@@ -145,7 +145,6 @@ class AgentLoop:
             # Check if the tool execution failed
             if executor_response.get('status') == 'error':
                 print(f"\n⚠️ Tool execution failed: {executor_response.get('error', 'Unknown error')}")
-                
                 #Use for performance testing
                 # Skip human-in-loop and insert automated failure response
                 default_error = executor_response.get('error', 'Unknown error')
@@ -156,8 +155,9 @@ class AgentLoop:
                 }
                 #end
 
-                #by pass for performance testing
-                # # Use human-in-loop to get help with the tool failure
+                #This was used for first round and not used in second round
+                # by pass for performance testing
+                # Use human-in-loop to get help with the tool failure
                 # perception_result = self.perception.handle_tool_failure(
                 #     error_details=executor_response.get('error', 'Unknown error'),
                 #     step_description=step.description,
