@@ -1,0 +1,982 @@
+{
+  "math/add": {
+    "tool_name": "add",
+    "server_id": "math",
+    "description": "Add two numbers. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/subtract": {
+    "tool_name": "subtract",
+    "server_id": "math",
+    "description": "Subtract one number from another. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/multiply": {
+    "tool_name": "multiply",
+    "server_id": "math",
+    "description": "Multiply two integers. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/divide": {
+    "tool_name": "divide",
+    "server_id": "math",
+    "description": "Divide one number by another. ",
+    "calls": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2025-06-10T04:51:26.990324",
+    "last_failure": null,
+    "average_response_time": 0.7406187057495117,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:51:26.990324",
+        "success": true,
+        "response_time": 0.7406187057495117,
+        "error": null
+      }
+    ]
+  },
+  "math/power": {
+    "tool_name": "power",
+    "server_id": "math",
+    "description": "Compute a raised to the power of b. ",
+    "calls": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2025-06-10T05:13:51.003489",
+    "last_failure": null,
+    "average_response_time": 0.7319879531860352,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:13:51.003489",
+        "success": true,
+        "response_time": 0.7319879531860352,
+        "error": null
+      }
+    ]
+  },
+  "math/cbrt": {
+    "tool_name": "cbrt",
+    "server_id": "math",
+    "description": "Compute the cube root of a number. ",
+    "calls": 2,
+    "successes": 2,
+    "failures": 0,
+    "last_success": "2025-06-10T05:13:51.743876",
+    "last_failure": null,
+    "average_response_time": 0.7902337312698364,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:03:23.216784",
+        "success": true,
+        "response_time": 0.8418526649475098,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:13:51.743876",
+        "success": true,
+        "response_time": 0.7386147975921631,
+        "error": null
+      }
+    ]
+  },
+  "math/factorial": {
+    "tool_name": "factorial",
+    "server_id": "math",
+    "description": "Compute the factorial of a number. ",
+    "calls": 6,
+    "successes": 6,
+    "failures": 0,
+    "last_success": "2025-06-10T05:15:47.313909",
+    "last_failure": null,
+    "average_response_time": 0.7529437144597372,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:59:54.592400",
+        "success": true,
+        "response_time": 0.726855993270874,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:00:29.444349",
+        "success": true,
+        "response_time": 0.7626733779907227,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:06:39.733063",
+        "success": true,
+        "response_time": 0.8656368255615234,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:07:33.140555",
+        "success": true,
+        "response_time": 0.7169215679168701,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:13:31.749418",
+        "success": true,
+        "response_time": 0.7288134098052979,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:15:47.313909",
+        "success": true,
+        "response_time": 0.7167611122131348,
+        "error": null
+      }
+    ]
+  },
+  "math/remainder": {
+    "tool_name": "remainder",
+    "server_id": "math",
+    "description": "Compute the remainder of a divided by b. ",
+    "calls": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2025-06-10T05:15:42.075559",
+    "last_failure": null,
+    "average_response_time": 0.712444543838501,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:15:42.075559",
+        "success": true,
+        "response_time": 0.712444543838501,
+        "error": null
+      }
+    ]
+  },
+  "math/sin": {
+    "tool_name": "sin",
+    "server_id": "math",
+    "description": "Compute sine of an angle in radians. ",
+    "calls": 3,
+    "successes": 3,
+    "failures": 0,
+    "last_success": "2025-06-10T05:17:55.107146",
+    "last_failure": null,
+    "average_response_time": 0.7554636796315511,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:04:28.316162",
+        "success": true,
+        "response_time": 0.7280943393707275,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:13:35.529309",
+        "success": true,
+        "response_time": 0.720038890838623,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:17:55.107146",
+        "success": true,
+        "response_time": 0.8182578086853027,
+        "error": null
+      }
+    ]
+  },
+  "math/cos": {
+    "tool_name": "cos",
+    "server_id": "math",
+    "description": "Compute cosine of an angle in radians. ",
+    "calls": 3,
+    "successes": 3,
+    "failures": 0,
+    "last_success": "2025-06-10T05:18:00.638341",
+    "last_failure": null,
+    "average_response_time": 0.7448176542917887,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:07:15.961238",
+        "success": true,
+        "response_time": 0.770683765411377,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:14:03.716276",
+        "success": true,
+        "response_time": 0.7468743324279785,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:00.638341",
+        "success": true,
+        "response_time": 0.7168948650360107,
+        "error": null
+      }
+    ]
+  },
+  "math/tan": {
+    "tool_name": "tan",
+    "server_id": "math",
+    "description": "Compute tangent of an angle in radians. ",
+    "calls": 2,
+    "successes": 2,
+    "failures": 0,
+    "last_success": "2025-06-10T05:07:42.063674",
+    "last_failure": null,
+    "average_response_time": 0.7580927610397339,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:07:29.115683",
+        "success": true,
+        "response_time": 0.7857646942138672,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:07:42.063674",
+        "success": true,
+        "response_time": 0.7304208278656006,
+        "error": null
+      }
+    ]
+  },
+  "math/mine": {
+    "tool_name": "mine",
+    "server_id": "math",
+    "description": "Special mining tool. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/create_thumbnail": {
+    "tool_name": "create_thumbnail",
+    "server_id": "math",
+    "description": "Create a 100x100 thumbnail from image. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/strings_to_chars_to_int": {
+    "tool_name": "strings_to_chars_to_int",
+    "server_id": "math",
+    "description": "Convert characters to ASCII values. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/int_list_to_exponential_sum": {
+    "tool_name": "int_list_to_exponential_sum",
+    "server_id": "math",
+    "description": "Sum exponentials of int list. ",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "math/fibonacci_numbers": {
+    "tool_name": "fibonacci_numbers",
+    "server_id": "math",
+    "description": "Generate first n Fibonacci numbers. ",
+    "calls": 2,
+    "successes": 2,
+    "failures": 0,
+    "last_success": "2025-06-10T05:16:34.530920",
+    "last_failure": null,
+    "average_response_time": 0.7270338535308838,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:50:52.672436",
+        "success": true,
+        "response_time": 0.7263381481170654,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:16:34.530920",
+        "success": true,
+        "response_time": 0.7277295589447021,
+        "error": null
+      }
+    ]
+  },
+  "math/run_python_sandbox": {
+    "tool_name": "run_python_sandbox",
+    "server_id": "math",
+    "description": "Run math code in Python sandbox. ",
+    "calls": 9,
+    "successes": 9,
+    "failures": 0,
+    "last_success": "2025-06-10T05:18:44.272979",
+    "last_failure": null,
+    "average_response_time": 0.761588282055325,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:49:05.072440",
+        "success": true,
+        "response_time": 0.8571188449859619,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:49:09.341425",
+        "success": true,
+        "response_time": 0.825800895690918,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:51:44.892660",
+        "success": true,
+        "response_time": 0.7184834480285645,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:51:48.913349",
+        "success": true,
+        "response_time": 0.7485723495483398,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:57:51.937732",
+        "success": true,
+        "response_time": 0.750896692276001,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:07:37.985007",
+        "success": true,
+        "response_time": 0.7483241558074951,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:16:16.635561",
+        "success": true,
+        "response_time": 0.7511270046234131,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:16:20.807386",
+        "success": true,
+        "response_time": 0.7247025966644287,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:44.272979",
+        "success": true,
+        "response_time": 0.7292685508728027,
+        "error": null
+      }
+    ]
+  },
+  "documents/search_stored_documents_rag": {
+    "tool_name": "search_stored_documents_rag",
+    "server_id": "documents",
+    "description": "Search old stored documents like PDF, DOCX, TXT, etc. to get relevant extracts. ",
+    "calls": 6,
+    "successes": 6,
+    "failures": 0,
+    "last_success": "2025-06-10T05:19:02.965289",
+    "last_failure": null,
+    "average_response_time": 2.7612186670303345,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:05:29.999558",
+        "success": true,
+        "response_time": 2.096287250518799,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:36.851101",
+        "success": true,
+        "response_time": 2.0525639057159424,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:41.664757",
+        "success": true,
+        "response_time": 1.746675729751587,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:52.839349",
+        "success": true,
+        "response_time": 1.8147048950195312,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:12:51.644464",
+        "success": true,
+        "response_time": 1.7845633029937744,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:19:02.965289",
+        "success": true,
+        "response_time": 7.072516918182373,
+        "error": null
+      }
+    ]
+  },
+  "documents/convert_webpage_url_into_markdown": {
+    "tool_name": "convert_webpage_url_into_markdown",
+    "server_id": "documents",
+    "description": "Return clean webpage content without Ads, and clutter. ",
+    "calls": 17,
+    "successes": 17,
+    "failures": 0,
+    "last_success": "2025-06-10T05:18:38.300417",
+    "last_failure": null,
+    "average_response_time": 2.488643912708058,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:47:51.533503",
+        "success": true,
+        "response_time": 2.175309419631958,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:52:13.468858",
+        "success": true,
+        "response_time": 2.5710079669952393,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:54:08.552438",
+        "success": true,
+        "response_time": 2.4500067234039307,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:55:25.123954",
+        "success": true,
+        "response_time": 2.4240562915802,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:59:34.604430",
+        "success": true,
+        "response_time": 3.6612794399261475,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:00:07.752883",
+        "success": true,
+        "response_time": 2.6240577697753906,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:02.564931",
+        "success": true,
+        "response_time": 1.9010226726531982,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:04.744394",
+        "success": true,
+        "response_time": 2.1782634258270264,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:06.591308",
+        "success": true,
+        "response_time": 1.845468282699585,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:09.213440",
+        "success": true,
+        "response_time": 2.62034273147583,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:11.282549",
+        "success": true,
+        "response_time": 2.067753791809082,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:53.575036",
+        "success": true,
+        "response_time": 3.547473430633545,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:08:57.043033",
+        "success": true,
+        "response_time": 2.90576434135437,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:10:29.678127",
+        "success": true,
+        "response_time": 3.2808895111083984,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:31.755773",
+        "success": true,
+        "response_time": 1.871649980545044,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:13:18.123486",
+        "success": true,
+        "response_time": 2.3597617149353027,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:38.300417",
+        "success": true,
+        "response_time": 1.8228390216827393,
+        "error": null
+      }
+    ]
+  },
+  "documents/extract_pdf": {
+    "tool_name": "extract_pdf",
+    "server_id": "documents",
+    "description": "Convert PDF to markdown. ",
+    "calls": 11,
+    "successes": 11,
+    "failures": 0,
+    "last_success": "2025-06-10T05:18:26.886326",
+    "last_failure": null,
+    "average_response_time": 1.7440682324496182,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:44:59.721942",
+        "success": true,
+        "response_time": 1.7835431098937988,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:45:11.745061",
+        "success": true,
+        "response_time": 1.7287719249725342,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:02.027969",
+        "success": true,
+        "response_time": 1.7216274738311768,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:10.528134",
+        "success": true,
+        "response_time": 1.7227413654327393,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:24.685747",
+        "success": true,
+        "response_time": 1.7540688514709473,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:34.826032",
+        "success": true,
+        "response_time": 1.7060415744781494,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:45.841857",
+        "success": true,
+        "response_time": 1.7074558734893799,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:57.015044",
+        "success": true,
+        "response_time": 1.7184770107269287,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:48:50.362648",
+        "success": true,
+        "response_time": 1.712989330291748,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:12:38.077242",
+        "success": true,
+        "response_time": 1.8382151126861572,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:26.886326",
+        "success": true,
+        "response_time": 1.7908189296722412,
+        "error": null
+      }
+    ]
+  },
+  "websearch/duckduckgo_search_results": {
+    "tool_name": "duckduckgo_search_results",
+    "server_id": "websearch",
+    "description": "Search DuckDuckGo. ",
+    "calls": 38,
+    "successes": 38,
+    "failures": 0,
+    "last_success": "2025-06-10T05:18:50.329819",
+    "last_failure": null,
+    "average_response_time": 1.6689042229401438,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:58:06.065926",
+        "success": true,
+        "response_time": 1.8467063903808594,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:58:27.261545",
+        "success": true,
+        "response_time": 1.7229933738708496,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:58:47.500378",
+        "success": true,
+        "response_time": 1.5283863544464111,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:59:01.666951",
+        "success": true,
+        "response_time": 1.6642940044403076,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:59:15.490315",
+        "success": true,
+        "response_time": 1.6631112098693848,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:59:27.679855",
+        "success": true,
+        "response_time": 1.9758281707763672,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:00:01.671276",
+        "success": true,
+        "response_time": 2.0729176998138428,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:04:56.289219",
+        "success": true,
+        "response_time": 1.452833652496338,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:08:21.192340",
+        "success": true,
+        "response_time": 1.5628395080566406,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:08:33.994250",
+        "success": true,
+        "response_time": 1.633462905883789,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:08:50.067053",
+        "success": true,
+        "response_time": 1.6636631488800049,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:10:22.634736",
+        "success": true,
+        "response_time": 1.5648863315582275,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:10:57.655568",
+        "success": true,
+        "response_time": 1.6650547981262207,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:15.678740",
+        "success": true,
+        "response_time": 1.6666231155395508,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:21.209165",
+        "success": true,
+        "response_time": 1.6653332710266113,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:11:46.697263",
+        "success": true,
+        "response_time": 1.5560877323150635,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:13:11.798425",
+        "success": true,
+        "response_time": 1.6665587425231934,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:12.235187",
+        "success": true,
+        "response_time": 1.5619146823883057,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:32.406550",
+        "success": true,
+        "response_time": 1.5583827495574951,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:50.329819",
+        "success": true,
+        "response_time": 1.720278263092041,
+        "error": null
+      }
+    ]
+  },
+  "websearch/download_raw_html_from_url": {
+    "tool_name": "download_raw_html_from_url",
+    "server_id": "websearch",
+    "description": "Fetch webpage content. ",
+    "calls": 8,
+    "successes": 8,
+    "failures": 0,
+    "last_success": "2025-06-10T05:18:55.890011",
+    "last_failure": null,
+    "average_response_time": 1.558969885110855,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:45:05.012101",
+        "success": true,
+        "response_time": 1.7560100555419922,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:28.638478",
+        "success": true,
+        "response_time": 0.6818788051605225,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:47:39.082342",
+        "success": true,
+        "response_time": 0.6817688941955566,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:48:01.567888",
+        "success": true,
+        "response_time": 0.8077292442321777,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:53:19.841967",
+        "success": true,
+        "response_time": 1.2171962261199951,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:05:44.121136",
+        "success": true,
+        "response_time": 1.9847369194030762,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:12:23.396946",
+        "success": true,
+        "response_time": 4.669528245925903,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:18:55.890011",
+        "success": true,
+        "response_time": 0.6729106903076172,
+        "error": null
+      }
+    ]
+  },
+  "mixed/add": {
+    "tool_name": "add",
+    "server_id": "mixed",
+    "description": "Add two numbers. ",
+    "calls": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2025-06-10T05:14:07.882260",
+    "last_failure": null,
+    "average_response_time": 0.7148411273956299,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:14:07.882260",
+        "success": true,
+        "response_time": 0.7148411273956299,
+        "error": null
+      }
+    ]
+  },
+  "mixed/subtract": {
+    "tool_name": "subtract",
+    "server_id": "mixed",
+    "description": "Subtract one number from another.",
+    "calls": 3,
+    "successes": 3,
+    "failures": 0,
+    "last_success": "2025-06-10T05:16:12.714752",
+    "last_failure": null,
+    "average_response_time": 0.7706810633341471,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:06:40.498775",
+        "success": true,
+        "response_time": 0.7637271881103516,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:07:15.189146",
+        "success": true,
+        "response_time": 0.8257243633270264,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:16:12.714752",
+        "success": true,
+        "response_time": 0.7225916385650635,
+        "error": null
+      }
+    ]
+  },
+  "mixed/multiply": {
+    "tool_name": "multiply",
+    "server_id": "mixed",
+    "description": "Multiply two integers.",
+    "calls": 3,
+    "successes": 3,
+    "failures": 0,
+    "last_success": "2025-06-10T05:07:03.821610",
+    "last_failure": null,
+    "average_response_time": 0.7355606555938721,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:50:57.466905",
+        "success": true,
+        "response_time": 0.7095375061035156,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:51:27.702842",
+        "success": true,
+        "response_time": 0.7114629745483398,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:07:03.821610",
+        "success": true,
+        "response_time": 0.7856814861297607,
+        "error": null
+      }
+    ]
+  },
+  "mixed/no_input": {
+    "tool_name": "no_input",
+    "server_id": "mixed",
+    "description": "Doesn't take any input.",
+    "calls": 0,
+    "successes": 0,
+    "failures": 0,
+    "last_success": null,
+    "last_failure": null,
+    "average_response_time": 0.0,
+    "history": []
+  },
+  "mixed/int_list_to_exponential_sum": {
+    "tool_name": "int_list_to_exponential_sum",
+    "server_id": "mixed",
+    "description": "Sum exponentials of int list. ",
+    "calls": 1,
+    "successes": 1,
+    "failures": 0,
+    "last_success": "2025-06-10T05:16:50.996975",
+    "last_failure": null,
+    "average_response_time": 0.7079575061798096,
+    "history": [
+      {
+        "timestamp": "2025-06-10T05:16:50.996975",
+        "success": true,
+        "response_time": 0.7079575061798096,
+        "error": null
+      }
+    ]
+  },
+  "mixed/strings_to_chars_to_int": {
+    "tool_name": "strings_to_chars_to_int",
+    "server_id": "mixed",
+    "description": "Convert characters to ASCII values. ",
+    "calls": 4,
+    "successes": 4,
+    "failures": 0,
+    "last_success": "2025-06-10T05:16:46.813284",
+    "last_failure": null,
+    "average_response_time": 0.7242869734764099,
+    "history": [
+      {
+        "timestamp": "2025-06-10T04:50:31.765754",
+        "success": true,
+        "response_time": 0.7092695236206055,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T04:50:32.484186",
+        "success": true,
+        "response_time": 0.7168700695037842,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:03:04.470318",
+        "success": true,
+        "response_time": 0.749474287033081,
+        "error": null
+      },
+      {
+        "timestamp": "2025-06-10T05:16:46.813284",
+        "success": true,
+        "response_time": 0.721534013748169,
+        "error": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+Tool Name,Number of Times Invoked,Success Rate (%)
+Cap,2,100.00
+GDP,1,100.00
+List_of_countries_by_GDP_,1,100.00
+Office,1,100.00
+cbrt,1,100.00
+convert_webpage_url_into_markdown,12,100.00
+download_raw_html_from_url,6,100.00
+duckduckgo_search_results,26,100.00
+extract_pdf,9,100.00
+factorial,4,100.00
+float,1,100.00
+int,1,100.00
+int_list_to_exponential_sum,1,100.00
+power,1,100.00
+remainder,1,100.00
+replace,1,100.00
+run_python_sandbox,5,100.00
+search_stored_documents_rag,4,100.00
+sin,2,100.00
+strings_to_chars_to_int,3,100.00
+subtract,2,100.00
