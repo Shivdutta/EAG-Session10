@@ -226,7 +226,7 @@ The system incorporates HIL for:
 
 # 🛠️ Tool Performance Comparative Report
 
-You can check for detailed logs in https://github.com/Shivdutta/EAG-Session10-Multi-Agent-System-/tree/main/memory/session_logs/2025/06
+Detailed logs :  https://github.com/Shivdutta/EAG-Session10-Multi-Agent-System-/tree/main/memory/session_logs/2025/06
 
 **Comparing:**  
 - `tool_performance_status.csv` from **Run 1** and **Run 2**
