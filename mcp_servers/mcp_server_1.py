@@ -151,7 +151,7 @@ def fibonacci_numbers(input: FibonacciInput) -> FibonacciOutput:
         fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
     return FibonacciOutput(result=fib_sequence[:n])
 
-# Uncomment for HIL
+# HIL
 # @mcp.tool()
 # def run_python_sandbox(input: PythonCodeInput) -> PythonCodeOutput:
 #     """Run math code in Python sandbox. """
